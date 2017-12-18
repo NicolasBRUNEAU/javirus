@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Virus
+comment0.text=\n\ Write\ a\ description\ of\ class\ Virus\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=virus_name\ tx_letal\ risque_trans\ zone_contagion\ vaccin\ filename
+comment1.target=Virus(java.lang.String,\ int,\ int,\ int,\ java.lang.String,\ java.lang.String)
+numComments=2

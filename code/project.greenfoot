@@ -1,8 +1,16 @@
 #Greenfoot properties
-#Mon Dec 18 14:00:05 CET 2017
+#Mon Dec 18 14:26:35 CET 2017
+class.Human.superclass=greenfoot.Actor
+class.Hopital.image=hopital.png
+class.MyWorld.image=grass.png
+mainWindow.width=850
+class.MyWorld.superclass=greenfoot.World
 project.charset=UTF-8
 version=3.0.0
+class.Virus.superclass=
+class.Vaccin.superclass=
+world.lastInstantiated=MyWorld
 mainWindow.y=40
 mainWindow.x=40
 mainWindow.height=600
-mainWindow.width=850
+class.Hopital.superclass=greenfoot.Actor
