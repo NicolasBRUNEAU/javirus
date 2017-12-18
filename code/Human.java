@@ -1,19 +1,45 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import greenfoot.*; 
+import java.util.ArrayList;
 /**
  * Write a description of class Human here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Human extends Actor
+public class Human extends Actor  
 {
+    // instance variables
+    private int id;
+    private boolean vie;
+    private ArrayList<String> maladies = new ArrayList<String>() ;
+    private ArrayList<String> vaccins= new ArrayList<String>() ;
+    private int statutSocial;
+    
+    
+
     /**
-     * Act - do whatever the Human wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Constructor for objects of class Human
      */
-    public void act() 
+    public Human(int id)
     {
-        // Add your action code here.
-    }    
+       this.id = id;
+       this.vie = true;
+       this.statutSocial = Greenfoot.getRandomNumber(3);
+       
+    }
+
+   
+    public void act()
+    {
+        turn(Greenfoot.getRandomNumber(360));
+        move(10);
+    }
+    
+    public int randomMove()
+    {
+        return 0;
+    }
+    
+    
 }
+    
