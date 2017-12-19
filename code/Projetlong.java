@@ -7,8 +7,10 @@
 public class Projetlong extends Virus 
 {
     // Constructeur de Projetlong
-    public Projetlong()
+    public Projetlong(Human h)
     {
-        super("ProjetLong", 2, 30, 20, "Anti_Projetlong", "ppl3.png");
+        // id, statutsocial, classe Human, nom virus, letalite, risque contagion, zone contagion
+        super(h.getID(), h.getStatut(), h, "Projetlong", 2, 30, 20);
+        this.chemin_image = "images/bee.png";
     }
 }

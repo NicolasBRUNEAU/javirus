@@ -6,33 +6,46 @@ import java.util.ArrayList;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Human extends Actor  
+public abstract class Human extends Actor  
 {
     // instance variables
     private int id;
     private boolean vie;
-    private ArrayList<String> maladies = new ArrayList<String>() ;
-    private ArrayList<String> vaccins= new ArrayList<String>() ;
     private int statutSocial;
+    protected String chemin_image;
     
-    
-
-    /**
-     * Constructor for objects of class Human
-     */
-    public Human(int id)
+    // Constructeur Human
+    protected Human(int id, int statut)
     {
        this.id = id;
+       this.statutSocial = statut;
        this.vie = true;
-       this.statutSocial = Greenfoot.getRandomNumber(3);
-       
     }
-
+    
+    
+    public int getID(){
+        return this.id;
+    }
+    
+    public int getStatut(){
+        return this.statutSocial;
+    }
+    
+    public boolean knowVirus(Virus vr){
+        // retourner les virus
+        return true;
+    }
+     
+    public boolean knowVaccin(Vaccin vc){
+        // retourner les vaccins
+        return false;
+    }
    
     public void act()
     {
         turn(Greenfoot.getRandomNumber(360));
         move(10);
+        this.setImage(this.chemin_image);
     }
     
     public int randomMove()

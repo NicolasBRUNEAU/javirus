@@ -1,7 +1,18 @@
 #BlueJ class context
 comment0.target=Human
 comment0.text=\n\ Write\ a\ description\ of\ class\ Human\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=
-comment1.target=void\ act()
-comment1.text=\n\ Act\ -\ do\ whatever\ the\ Human\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
-numComments=2
+comment1.params=id\ statut
+comment1.target=Human(int,\ int)
+comment2.params=
+comment2.target=int\ getID()
+comment3.params=
+comment3.target=int\ getStatut()
+comment4.params=vr
+comment4.target=boolean\ knowVirus(Virus)
+comment5.params=vc
+comment5.target=boolean\ knowVaccin(Vaccin)
+comment6.params=
+comment6.target=void\ act()
+comment7.params=
+comment7.target=int\ randomMove()
+numComments=8

@@ -27,12 +27,40 @@ public class MyWorld extends World
 
     public void populate()
     {
-        for(int i=0; i<=19 ; i++)
+        for(int i=0; i<=6 ; i++)
         {
-           Human h = new Human(i);
+           Human h = new P7(i);
            int posX = Greenfoot.getRandomNumber(800);
            int posY = Greenfoot.getRandomNumber(800);
+           if (i == 6)
+           {
+               h = new Projetlong(h);
+           }
            addObject(h, posX, posY);
+        }
+        
+        for(int i=7; i<=13 ; i++)
+        {
+           Human j = new P6(i);
+           int posX = Greenfoot.getRandomNumber(800);
+           int posY = Greenfoot.getRandomNumber(800);
+           if (i == 13)
+           {
+              j = new Meetu(j);
+           }
+           addObject(j, posX, posY);
+        }
+        
+        for(int i=14; i<=20 ; i++)
+        {
+           Human c  = new P11(i);
+           int posX = Greenfoot.getRandomNumber(800);
+           int posY = Greenfoot.getRandomNumber(800);
+           if (i == 20)
+           {
+              c = new Anr(c);
+           }
+           addObject(c, posX, posY);
         }
     }
     

@@ -1,14 +1,12 @@
-/**
- * Write a description of class Meetu here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+import java.util.ArrayList;
+
+
 public class Meetu extends Virus 
-{
-    // Constructeur de Meetu
-    public Meetu()
+{    
+    public Meetu(Human h)
     {
-        super("MEETU", 3, 50, 60, "Anti_Meetu", "ppl2.png");
+        // id, statutsocial, classe Human, nom virus, letalite, risque contagion, zone contagion
+        super(h.getID(), h.getStatut(), h, "Meetu", 2, 50, 150);
+        this.chemin_image = "images/alligator.png";
     }
 }
