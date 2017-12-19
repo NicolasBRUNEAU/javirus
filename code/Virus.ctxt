@@ -2,4 +2,10 @@
 comment0.target=Virus
 comment1.params=id\ statut\ h\ virus_name\ tx_letal\ risque_trans\ zone_contagion
 comment1.target=Virus(int,\ int,\ Human,\ java.lang.String,\ int,\ int,\ int)
-numComments=2
+comment2.params=
+comment2.target=int\ getLetalite()
+comment3.params=
+comment3.target=int\ getZone()
+comment4.params=
+comment4.target=int\ getRisque()
+numComments=5

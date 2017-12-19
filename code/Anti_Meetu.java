@@ -1,19 +1,20 @@
-/**
- * Write a description of class Anti_Meetu here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class Anti_Meetu extends Vaccin 
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Anti_Meetu
-     */
-    public Anti_Meetu()
+    // Constructeur 
+    public Anti_Meetu(Human h)
     {
-        super("Anti_Meetu", 1, 1000);
+        super(h.getID(), h.getStatut(), h, "Anti_Meetu", 2, 1000, 50);
+    }
+    
+    // getter
+    public int getLimite(){
+        return this.statutLimite;
+    }
+    public int getDuree(){
+        return this.duree_efficacite;
+    }
+    public int getResistance(){
+        return this.proba_resistance;
     }
 }

@@ -6,12 +6,20 @@
  */
 public class Anti_Anr extends Vaccin 
 {
-    // instance variables - replace the example below with your own
-    private int x;
-    
-    // Super constructeur : String name_vaccin, int lim_statut, int duree_efficacite
-    public Anti_Anr()
+    // Constructeur Vaccin Anr
+    public Anti_Anr(Human h)
     {
-        super("Anti_Anr", 2, 1000);
+        super(h.getID(), h.getStatut(), h, "Anti_Anr", 2, 1000, 70);
+    }
+    
+    // getter
+    public int getLimite(){
+        return this.statutLimite;
+    }
+    public int getDuree(){
+        return this.duree_efficacite;
+    }
+    public int getResistance(){
+        return this.proba_resistance;
     }
 }

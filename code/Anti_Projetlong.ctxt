@@ -1,7 +1,11 @@
 #BlueJ class context
 comment0.target=Anti_Projetlong
-comment0.text=\n\ Write\ a\ description\ of\ class\ Anti_Projetlong\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=
-comment1.target=Anti_Projetlong()
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Anti_Projetlong\n
-numComments=2
+comment1.params=h
+comment1.target=Anti_Projetlong(Human)
+comment2.params=
+comment2.target=int\ getLimite()
+comment3.params=
+comment3.target=int\ getDuree()
+comment4.params=
+comment4.target=int\ getResistance()
+numComments=5

@@ -1,6 +1,11 @@
 #BlueJ class context
 comment0.target=Anr
-comment0.text=\n\ Write\ a\ description\ of\ class\ Anr\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=h
 comment1.target=Anr(Human)
-numComments=2
+comment2.params=
+comment2.target=int\ getLetalite()
+comment3.params=
+comment3.target=int\ getZone()
+comment4.params=
+comment4.target=int\ getRisque()
+numComments=5

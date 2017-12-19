@@ -1,20 +1,20 @@
-/**
- * Write a description of class Anti_Projetlong here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class Anti_Projetlong extends Vaccin 
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Anti_Projetlong
-     */
-    public Anti_Projetlong()
+    // Constructeur Vaccin projetlong
+    public Anti_Projetlong(Human h)
     {
-        super("Anti_Projetlong", 3, 1000);
+        super(h.getID(), h.getStatut(), h, "Anti_Projetlong", 3, 1000, 60);
     }
 
+    // getter
+    public int getLimite(){
+        return this.statutLimite;
+    }
+    public int getDuree(){
+        return this.duree_efficacite;
+    }
+    public int getResistance(){
+        return this.proba_resistance;
+    }
 }
