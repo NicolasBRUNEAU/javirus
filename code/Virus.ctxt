@@ -1,5 +1,5 @@
 #BlueJ class context
 comment0.target=Virus
-comment1.params=id\ statut\ h\ virus_name
-comment1.target=Virus(int,\ int,\ Human,\ java.lang.String)
+comment1.params=id\ statut\ h
+comment1.target=Virus(int,\ int,\ Human)
 numComments=2
