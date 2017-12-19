@@ -1,5 +1,5 @@
 import greenfoot.*; 
-import java.util.ArrayList;
+import java.util.List;
 /**
  * Write a description of class Human here.
  * 
@@ -45,12 +45,25 @@ public abstract class Human extends Actor
     {
         turn(Greenfoot.getRandomNumber(360));
         move(10);
+        this.contracte();
         this.setImage(this.chemin_image);
     }
     
-    public int randomMove()
+    public void contracte()
     {
-        return 0;
+        List <Meetu> voisins = this.getObjectsInRange(Meetu.zone_contagion, Meetu.class);
+        int nb_contaminant = voisins.size();
+        for(int i = 0; i < nb_contaminant; i++)
+        {
+            int n = Greenfoot.getRandomNumber(100);
+            if(n >= Meetu.risque_transmission)
+            {
+                Meetu new_malade = new Meetu(this);
+                getWorld().addObject(new_malade, this.getX(), this.getY());
+                getWorld().removeObject(this);
+            }
+        }
+        
     }
     
     
