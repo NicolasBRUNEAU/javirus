@@ -2,5 +2,5 @@
 comment0.target=Vaccin
 comment0.text=\n\ Write\ a\ description\ of\ class\ Vaccin\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=name_vaccin\ lim_statut\ duree_efficacite
-comment1.target=Vaccin(java.lang.String,\ java.lang.String,\ int)
+comment1.target=Vaccin(java.lang.String,\ int,\ int)
 numComments=2

@@ -8,23 +8,10 @@ public class Anti_Anr extends Vaccin
 {
     // instance variables - replace the example below with your own
     private int x;
-
-    /**
-     * Constructor for objects of class Anti_Anr
-     */
+    
+    // Super constructeur : String name_vaccin, int lim_statut, int duree_efficacite
     public Anti_Anr()
     {
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+        super("Anti_Anr", 2, 1000);
     }
 }

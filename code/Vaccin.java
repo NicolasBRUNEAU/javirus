@@ -8,11 +8,11 @@ public class Vaccin
 {
     // instance variables - replace the example below with your own
     private String name;
-    private String statutLimite;
+    private int statutLimite;
     private int duree_efficacite;
 
     // Constructeur de Vaccin
-    public Vaccin(String name_vaccin, String lim_statut, int duree_efficacite)
+    public Vaccin(String name_vaccin, int lim_statut, int duree_efficacite)
     {
         this.name = name_vaccin;
         this.statutLimite = lim_statut;
