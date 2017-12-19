@@ -11,6 +11,6 @@ public class Anr extends Virus
     {
         // id, statutsocial, classe Human, nom virus, letalite, risque contagion, zone contagion
         super(h.getID(), h.getStatut(), h, "Anr", 10, 50, 20);
-        this.chemin_image = "images/ant3.png";
+        this.chemin_image = "images/ppl2.png";
     }
 }

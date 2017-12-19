@@ -10,7 +10,6 @@ public abstract class Virus extends Human
     private int risque_transmission;
     private int zone_contagion;
 
-    //"ANR", 10, 50, 20, "Anti_Anr"
     // Constructeur de Virus
     protected Virus(int id, int statut, Human h, String virus_name, int tx_letal, int risque_trans, int zone_contagion)
     {
@@ -20,5 +19,17 @@ public abstract class Virus extends Human
         this.letalite = tx_letal;
         this.risque_transmission = risque_trans;
         this.zone_contagion = zone_contagion;
+    }
+    
+    public int getLetalite(){
+        return this.letalite;
+    }
+    
+    public int getZone(){
+        return this.zone_contagion;
+    }
+    
+    public int getRisque(){
+        return this.risque_transmission;
     }
 }
