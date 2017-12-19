@@ -1,21 +1,14 @@
 
 public class Meetu extends Virus 
 {    
+    public static int zone_contagion = 150;
+    public static int letalite = 2;
+    public static int risque_transmission = 50;
+   
     public Meetu(Human h)
     {
         // id, statutsocial, classe Human, nom virus, letalite, risque contagion, zone contagion
-        super(h.getID(), h.getStatut(), h, "Meetu", 2, 50, 150);
+        super(h.getID(), h.getStatut(), h, "Meetu");
         this.chemin_image = "images/ppl1.png";
-    }
-    
-    // Ensemble Getter
-    public int getLetalite(){
-        return this.letalite;
-    }
-    public int getZone(){
-        return this.zone_contagion;
-    }
-    public int getRisque(){
-        return this.risque_transmission;
     }
 }

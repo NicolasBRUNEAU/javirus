@@ -2,10 +2,4 @@
 comment0.target=Meetu
 comment1.params=h
 comment1.target=Meetu(Human)
-comment2.params=
-comment2.target=int\ getLetalite()
-comment3.params=
-comment3.target=int\ getZone()
-comment4.params=
-comment4.target=int\ getRisque()
-numComments=5
+numComments=2
