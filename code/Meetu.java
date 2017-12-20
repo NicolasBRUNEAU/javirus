@@ -1,9 +1,9 @@
 
 public class Meetu extends Virus 
 {    
-    public static int zone_contagion = 150;
+    public static int zone_contagion = 30;
     public static int letalite = 2;
-    public static int risque_transmission = 50;
+    public static int risque_transmission = 5;
     public static String name = "Meetu";
     protected Human hum;
     
@@ -13,6 +13,7 @@ public class Meetu extends Virus
         super(h);
         hum = h;
         this.chemin_image = "images/ppl1.png";
+        this.setImage("images/ppl1.png");
     }
     
     public boolean isInfected(Class<? extends Virus> vr){

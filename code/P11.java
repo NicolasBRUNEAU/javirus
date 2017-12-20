@@ -11,5 +11,6 @@ public class P11 extends Human
     public P11(){
         super(1);
         this.chemin_image = "images/baby1.png";
+        this.setImage("images/baby1.png");
     }  
 }

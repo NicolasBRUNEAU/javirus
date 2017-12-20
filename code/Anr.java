@@ -1,9 +1,9 @@
 
 public class Anr extends Virus 
 {
-    public static int zone_contagion = 120;
+    public static int zone_contagion = 50;
     public static int letalite = 10;
-    public static int risque_transmission = 50;
+    public static int risque_transmission = 2;
     public static String name = "Anr";
     protected Human hum;
     
@@ -14,6 +14,7 @@ public class Anr extends Virus
         super(h);
         hum = h;
         this.chemin_image = "images/ppl2.png";
+        this.setImage("images/ppl2.png");
     }
     
     public boolean isInfected(Class<? extends Virus> vr){

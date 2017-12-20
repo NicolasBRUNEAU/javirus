@@ -8,7 +8,7 @@ public abstract class Human extends Actor
     private static int nb = 0;
     private boolean vie;
     private int statutSocial;
-    protected String chemin_image;
+    public String chemin_image = "images/bee.png";
     static int compteur_act = 0;
     
     // Constructeur Human
@@ -30,18 +30,18 @@ public abstract class Human extends Actor
 
     public void act()
     {
-        if ( Greenfoot.getRandomNumber(3) > 1){
+        if ( Greenfoot.getRandomNumber(21) > 19 ){
             turn(Greenfoot.getRandomNumber(180));
         }
-        move(10);
+        move(1);
         this.contracte();
-        this.setImage(this.chemin_image);
+        // this.setImage(this.chemin_image);
     }
     
     public void contracte()
     {
         int choix_maladie = Greenfoot.getRandomNumber(3);
-        int n = Greenfoot.getRandomNumber(100);
+        int effet_vaccin = 0;
         int posX = this.getX();
         int posY = this.getY();
         int nbr_voisin = 0;
@@ -51,7 +51,12 @@ public abstract class Human extends Actor
                 if(! this.isInfected(Meetu.class)){
                     nbr_voisin = this.nbr_voisin(Meetu.class, Meetu.zone_contagion);
                     for(int i = 0; i < nbr_voisin; i++){
-                        if(n >= Meetu.risque_transmission){
+                        // Test possetion vaccin
+                        if (this.isImmunised(Anti_Meetu.class)){
+                            effet_vaccin = Anti_Meetu.proba_resistance;
+                        }
+                        // Test proba de transmission : proba transmission + proba reussite vaccin
+                        if(Greenfoot.getRandomNumber(100) >= Meetu.risque_transmission){
                             Meetu new_malade = new Meetu(this);
                             getWorld().addObject(new_malade, posX, posY);
                             getWorld().removeObject(this);
@@ -64,11 +69,18 @@ public abstract class Human extends Actor
                 if(! this.isInfected(Anr.class)){
                     nbr_voisin = this.nbr_voisin(Anr.class, Anr.zone_contagion);
                     for(int i = 0; i < nbr_voisin; i++){
-                        if(n >= Anr.risque_transmission){
-                            Anr new_malade = new Anr(this);
-                            getWorld().addObject(new_malade, posX, posY);
-                            getWorld().removeObject(this);
-                            break;
+                        // Test possetion vaccin
+                        if (this.isImmunised(Anti_Anr.class)){
+                            effet_vaccin = Anti_Anr.proba_resistance;
+                        }
+                        // Test proba de transmission : proba transmission + proba reussite vaccin
+                        if(Greenfoot.getRandomNumber(100) >= effet_vaccin){
+                            if(Greenfoot.getRandomNumber(100) >= Anr.risque_transmission){
+                                Anr new_malade = new Anr(this);
+                                getWorld().addObject(new_malade, posX, posY);
+                                getWorld().removeObject(this);
+                                break;
+                            }
                         }
                     }
                 }
@@ -77,7 +89,12 @@ public abstract class Human extends Actor
                 if(! this.isInfected(Projetlong.class)){
                     nbr_voisin = this.nbr_voisin(Projetlong.class, Projetlong.zone_contagion);
                     for(int i = 0; i < nbr_voisin; i++){
-                        if(n >= Projetlong.risque_transmission){
+                        // Test possetion vaccin
+                        if (this.isImmunised(Anti_Projetlong.class)){
+                            effet_vaccin = Anti_Projetlong.proba_resistance;
+                        }
+                        // Test proba de transmission : proba transmission + proba reussite vaccin
+                        if(Greenfoot.getRandomNumber(100) >= Projetlong.risque_transmission){
                             Projetlong new_malade = new Projetlong(this);
                             getWorld().addObject(new_malade, posX, posY);
                             getWorld().removeObject(this);

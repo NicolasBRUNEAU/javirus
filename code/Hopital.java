@@ -1,19 +1,20 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
+import java.util.ArrayList;
 
-/**
- * Write a description of class Hopital here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Hopital extends Actor
 {
-    /**
-     * Act - do whatever the Hopital wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public void act() 
     {
-        
+         // zone action hopital : 150
+         /*
+         Class<? extends Virus> c;
+         List malade = this.getObjectsInRange(150, c);
+         for (int = 0; i <= 
+             Projetlong new_malade = new Projetlong(this);
+             getWorld().addObject(new_malade, posX, posY);
+             getWorld().removeObject(this);
+         */
+         
     }    
 }

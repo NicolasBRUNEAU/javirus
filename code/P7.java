@@ -7,5 +7,6 @@ public class P7 extends Human
     {
         super(3);
         this.chemin_image = "images/man01.png";
+        this.setImage("images/man01.png");
     }
 }

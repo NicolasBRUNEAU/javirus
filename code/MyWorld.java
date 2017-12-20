@@ -24,23 +24,24 @@ public class MyWorld extends World
     public void populate()
     {
         Human h;
+        // Sains
         for(int i = 0; i < 6; i++){
             addObject(new P7(), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
             addObject(new P6(), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
             addObject(new P11(), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
         }
+        
+        // Graine maladie
         addObject(new Anr(new P7()), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
         addObject(new Meetu(new P6()), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
         addObject(new Projetlong(new P11()), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
-    }
-    
-    public void immunize(){
-        // immunisation de population
-        /*
-         * prototype comme la graine 0 de la maladie
-         * 
-         * Human c = new Anti_XXXX(c);
-         */
+        
+        // Vaccins
+        for(int i = 0; i < 6; i++){
+            addObject(new Anti_Projetlong(new Anti_Anr(new P7())), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
+            addObject(new Anti_Anr(new P6()), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
+            addObject(new P11(), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
+        }
     }
     
     /*public void patient0()

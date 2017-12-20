@@ -12,6 +12,8 @@ public class Anti_Meetu extends Vaccin
     public Anti_Meetu(Human h)
     {
         super(h);
+        hum = h;
+        this.setImage(h.getImage());
     }
     
     public boolean isImmunised(Class<? extends Vaccin> vc){
