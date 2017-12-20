@@ -1,25 +1,21 @@
-/**
- * Write a description of class Anti_Anr here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class Anti_Anr extends Vaccin 
 {
+    // Instance Variable
+    protected Human hum;
+    public static String name = "Anti_Anr";
+    public static int statutLimite = 2;
+    public static int duree_efficacite = 1000;
+    public static int proba_resistance = 70;
+    
     // Constructeur Vaccin Anr
     public Anti_Anr(Human h)
     {
-        super(h.getID(), h.getStatut(), h, "Anti_Anr", 2, 1000, 70);
+        super(h);
     }
-    
-    // getter
-    public int getLimite(){
-        return this.statutLimite;
-    }
-    public int getDuree(){
-        return this.duree_efficacite;
-    }
-    public int getResistance(){
-        return this.proba_resistance;
+
+    public boolean isImmunised(Class<? extends Vaccin> vc){
+        // recherche déja immunise par vaccin (vc)
+        return(this.getClass() == vc || hum.isImmunised(vc));
     }
 }

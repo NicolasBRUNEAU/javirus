@@ -2,10 +2,6 @@
 comment0.target=Anti_Meetu
 comment1.params=h
 comment1.target=Anti_Meetu(Human)
-comment2.params=
-comment2.target=int\ getLimite()
-comment3.params=
-comment3.target=int\ getDuree()
-comment4.params=
-comment4.target=int\ getResistance()
-numComments=5
+comment2.params=vc
+comment2.target=boolean\ isImmunised(java.lang.Class)
+numComments=3

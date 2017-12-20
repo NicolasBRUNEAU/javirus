@@ -6,30 +6,17 @@ public abstract class Vaccin extends Human
     // instance variables
     protected Human hum;
     private String name;
-    protected int statutLimite;
-    protected int duree_efficacite;
-    protected int proba_resistance;
-
+    
     // Constructeur de Vaccin
-    protected Vaccin(int id, int statut, Human h, String name_vaccin, int lim_statut, int duree_efficacite, int prob_resistance)
+    protected Vaccin(Human h)
     {
-        super(id, statut);
+        super(h.getStatut());
         hum = h;
-        this.name = name_vaccin;
-        this.statutLimite = lim_statut;
-        this.duree_efficacite = duree_efficacite;
-        this.proba_resistance = prob_resistance;
     }
     
-    // Ensemble getter
-    public int getLimite(){
-        return this.statutLimite;
-    }
-    public int getDuree(){
-        return this.duree_efficacite;
-    }
-    public int getResistance(){
-        return this.proba_resistance;
+    public boolean isImmunised(Class<? extends Vaccin> vc){
+        // recherche déja immunise par vaccin (vc)
+        return(this.getClass() == vc || hum.isImmunised(vc));
     }
 }
 

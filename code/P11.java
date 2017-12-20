@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class P11 extends Human
 {
-    public P11(int id){
-        super(id, 1);
+    public P11(){
+        super(1);
         this.chemin_image = "images/baby1.png";
     }  
 }

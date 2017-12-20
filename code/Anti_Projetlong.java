@@ -1,20 +1,21 @@
 
 public class Anti_Projetlong extends Vaccin 
 {
+    // Instance Variable
+        protected Human hum;
+        public static String name = "Anti_Projetlong";
+        public static int statutLimite = 3;
+        public static int duree_efficacite = 1000;
+        public static int proba_resistance = 60;
+        
     // Constructeur Vaccin projetlong
     public Anti_Projetlong(Human h)
     {
-        super(h.getID(), h.getStatut(), h, "Anti_Projetlong", 3, 1000, 60);
+        super(h);
     }
 
-    // getter
-    public int getLimite(){
-        return this.statutLimite;
-    }
-    public int getDuree(){
-        return this.duree_efficacite;
-    }
-    public int getResistance(){
-        return this.proba_resistance;
+    public boolean isImmunised(Class<? extends Vaccin> vc){
+        // recherche déja immunise par vaccin (vc)
+        return(this.getClass() == vc || hum.isImmunised(vc));
     }
 }

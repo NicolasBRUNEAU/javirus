@@ -3,12 +3,7 @@ import java.util.Random;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
-/**
- * Write a description of class MyWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class MyWorld extends World
 {
    
@@ -28,41 +23,24 @@ public class MyWorld extends World
 
     public void populate()
     {
-        for(int i=0; i<=6 ; i++)
-        {
-           Human h = new P7(i);
-           int posX = Greenfoot.getRandomNumber(800);
-           int posY = Greenfoot.getRandomNumber(800);
-           if (i == 6)
-           {
-               h = new Projetlong(h);
-           }
-           addObject(h, posX, posY);
+        Human h;
+        for(int i = 0; i < 6; i++){
+            addObject(new P7(), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
+            addObject(new P6(), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
+            addObject(new P11(), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
         }
-        
-        for(int i=7; i<=13 ; i++)
-        {
-           Human j = new P6(i);
-           int posX = Greenfoot.getRandomNumber(800);
-           int posY = Greenfoot.getRandomNumber(800);
-           if (i == 13)
-           {
-              j = new Meetu(j);
-           }
-           addObject(j, posX, posY);
-        }
-        
-        for(int i=14; i<=20 ; i++)
-        {
-           Human c  = new P11(i);
-           int posX = Greenfoot.getRandomNumber(800);
-           int posY = Greenfoot.getRandomNumber(800);
-           if (i == 20)
-           {
-              c = new Anr(c);
-           }
-           addObject(c, posX, posY);
-        }
+        addObject(new Anr(new P7()), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
+        addObject(new Meetu(new P6()), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
+        addObject(new Projetlong(new P11()), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
+    }
+    
+    public void immunize(){
+        // immunisation de population
+        /*
+         * prototype comme la graine 0 de la maladie
+         * 
+         * Human c = new Anti_XXXX(c);
+         */
     }
     
     /*public void patient0()

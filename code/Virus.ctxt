@@ -1,7 +1,9 @@
 #BlueJ class context
 comment0.target=Virus
-comment1.params=id\ statut\ h
-comment1.target=Virus(int,\ int,\ Human)
+comment1.params=h
+comment1.target=Virus(Human)
 comment2.params=h
 comment2.target=void\ addHuman(Human)
-numComments=3
+comment3.params=vr
+comment3.target=boolean\ isInfected(java.lang.Class)
+numComments=4

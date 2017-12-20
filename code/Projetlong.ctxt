@@ -2,4 +2,6 @@
 comment0.target=Projetlong
 comment1.params=h
 comment1.target=Projetlong(Human)
-numComments=2
+comment2.params=vr
+comment2.target=boolean\ isInfected(java.lang.Class)
+numComments=3
