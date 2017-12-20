@@ -12,4 +12,5 @@ public class Meetu extends Virus
         super(h.getID(), h.getStatut(), h);
         this.chemin_image = "images/ppl1.png";
     }
+  
 }

@@ -15,4 +15,6 @@ comment6.params=
 comment6.target=void\ act()
 comment7.params=
 comment7.target=void\ contracte()
-numComments=8
+comment8.params=c\ zc
+comment8.target=int\ nbr_voisin(java.lang.Class,\ int)
+numComments=9

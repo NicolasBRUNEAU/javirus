@@ -6,6 +6,7 @@ public abstract class Virus extends Human
     // instance variables
     protected Human hum;
 
+
     // Constructeur de Virus
     protected Virus(int id, int statut, Human h)
     {
@@ -13,4 +14,8 @@ public abstract class Virus extends Human
         hum = h;
     }
 
+    public void addHuman(Human h){
+        hum = h;
+    }
+ 
 }

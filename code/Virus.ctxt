@@ -2,4 +2,6 @@
 comment0.target=Virus
 comment1.params=id\ statut\ h
 comment1.target=Virus(int,\ int,\ Human)
-numComments=2
+comment2.params=h
+comment2.target=void\ addHuman(Human)
+numComments=3
